@@ -27,15 +27,23 @@
             <th scope="col">Modelo</th>
             <th scope="col">Marca</th>
             <th scope="col">Ano</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
+          {% for dados in dado %}
           <tr>
-            <td>Mark</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>          
+            <td>{{dados.id}}</td>
+            <td>{{dados.modelo}}</td>
+            <td>{{dados.marca}}</td>
+            <td>{{dados.ano}}</td>
+            <td>
+              <a href="view/{{dados.id}}/" class="btn btn-secondary">View</a>
+              <a href="edit/{{dados.id}}/" class="btn btn-secondary">Edit</a>
+              <a href="" class="btn btn-secondary">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário Python</title>
+    <title>View Python</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,19 +14,15 @@
 
   <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-      <h1>Cadastro</h1>
+      <h1>View</h1>
     </div>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
       <a href="/" class="btn btn-info">Voltar</a>
     </div>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-      <form method="post" action="{% if dados %}/update/{{dados.id}}/{% else %}/create/{% endif %}" id="form">
-          {% csrf_token %}
-          <div class="form-group mt-4">Modelo {{ form.modelo }}</div>
-          <div class="form-group mt-4">Marca {{ form.marca }}</div>
-          <div class="form-group mt-4">Ano {{ form.ano }}</div>
-          <input type="submit" class="btn btn-success" value="Salvar" />
-      </form>
+     <strong>Modelo: </strong>{{dados.modelo}}<br>
+     <strong>Marca: </strong>{{dados.Marca}}<br>
+     <strong>Ano: </strong>{{dados.ano}}<br>
   </div>
   </body>
 </html>
